@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
-class Preprocessor:
+class DataPreprocessor:
     """Preprocesses the DataFrame for machine learning models.
     Works only for personalized_learning_dataset.csv."""
     def __init__(self, df: pd.DataFrame):
