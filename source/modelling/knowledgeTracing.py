@@ -20,12 +20,12 @@ Y = df['correct']
 
 preprocessor = ColumnTransformer([
     ('topic', OneHotEncoder(), ['topic']),
-    ('num', StandardScaler(), ['attempts', 'timeTaken', 'PreviousScoreAverage'])
+    ('num', StandardScaler(), ['timeTaken', 'PreviousScoreAverage'])
 ])
 
 KnowledgeTracingPipeline = Pipeline([
     ('preprocessor', preprocessor),
-    ('classifier', LogisticRegression(solver = 'liblinear'))
+    ('classifier', LogisticRegression(solver = 'liblinear', class_weight = 'balanced'))
 ])
 
 XTrain, XTest, YTrain, YTest = train_test_split(X, Y, test_size=0.2, random_state=42)
@@ -38,3 +38,4 @@ yProbabilities = KnowledgeTracingPipeline.predict_proba(XTest)[:, 1]
 
 print(classification_report(YTest, yPredictions))
 print("ROC-AUC:", roc_auc_score(YTest, yProbabilities))
+print(df['correct'].value_counts(normalize = True))
