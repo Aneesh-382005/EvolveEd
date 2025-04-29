@@ -20,6 +20,7 @@ kiwisolver==1.4.8
 matplotlib==3.10.1
 matplotlib-inline @ file:///home/conda/feedstock_root/build_artifacts/matplotlib-inline_1733416936468/work
 nest_asyncio @ file:///home/conda/feedstock_root/build_artifacts/nest-asyncio_1733325553580/work
+networkx==3.4.2
 numpy==2.2.4
 packaging==25.0
 pandas==2.2.3
