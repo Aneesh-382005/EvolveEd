@@ -2,3 +2,4 @@ envi/
 data/raw
 data/preprocessed
 __pycache__/
+data/
