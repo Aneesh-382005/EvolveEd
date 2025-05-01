@@ -106,5 +106,3 @@ elif bestAccModel in [bestF1Model, bestAucModel]:
     print(f"{bestAccModel} performed best on accuracy, but consider {bestF1Model} or {bestAucModel} for balanced performance.")
 else:
     print(f"{bestAccModel} leads in accuracy, {bestF1Model} in F1, and {bestAucModel} in AUC. Prefer {bestF1Model} or {bestAucModel} for balanced results.")
-
-print("\nNote: Hyperparameter tuning might further improve model performance.")
